@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalculatorController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" />
       <GridPane>
@@ -27,12 +26,12 @@
         </rowConstraints>
          <children>
             <Label contentDisplay="CENTER" text="basic repoduction number (R0)" />
-            <TextField GridPane.columnIndex="1" />
+            <TextField fx:id="tf_r0" GridPane.columnIndex="1" />
             <Label contentDisplay="CENTER" layoutX="146.0" layoutY="17.0" text="Contact per unit time" GridPane.rowIndex="1" />
-            <TextField layoutX="310.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tf_contact" layoutX="310.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label contentDisplay="CENTER" layoutX="146.0" layoutY="17.0" text="mean infectious period" GridPane.rowIndex="2" />
-            <TextField layoutX="310.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tf_period" layoutX="310.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn_calculate" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calculate" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>
